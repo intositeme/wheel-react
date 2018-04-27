@@ -20,15 +20,15 @@ WheelReact.events = {
     }
     if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
        if (e.deltaX > 0 && WheelReact._config.hasOwnProperty('left')) {
-        WheelReact._config.left();
+        WheelReact._config.left(e);
       } else if (e.deltaX < 0 && WheelReact._config.hasOwnProperty('right')) {
-        WheelReact._config.right();
+        WheelReact._config.right(e);
       }
     } else {
       if (e.deltaY > 0 && WheelReact._config.hasOwnProperty('up')) {
-        WheelReact._config.up();
+        WheelReact._config.up(e);
       } else if (e.deltaY < 0 && WheelReact._config.hasOwnProperty('down')) {
-        WheelReact._config.down();
+        WheelReact._config.down(e);
       }
     }
     WheelReact.pauseWheelEvent = true;
